@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Exercicio1 {
+    public static void main(String[] args) {
+
+        Scanner Caio = new Scanner(System.in);
+
+        double preco;
+        double total = 0;
+        String resposta = "sim";
+
+        while (resposta.equals("sim")) {
+
+            System.out.println("Digite o preço:");
+            preco = Caio.nextDouble();
+
+            total = total + preco;
+
+            System.out.println("Deseja adicionar outro? sim/nao");
+            resposta = Caio.next();
+        }
+
+        System.out.println("Total: " + total);
+    }
+}
