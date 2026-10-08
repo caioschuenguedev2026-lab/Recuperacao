@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Exercicio2 {
+    public static void main(String[] args) {
+
+        Scanner Caio = new Scanner(System.in);
+
+        int numero;
+        int soma = 0;
+        int quantidade = 0;
+        int maior = 0;
+
+        do {
+            System.out.println("Digite um número (-1 para parar):");
+            numero = Caio.nextInt();
+
+            if (numero != -1) {
+
+                soma = soma + numero;
+                quantidade = quantidade + 1;
+
+                if (quantidade == 1) {
+                    maior = numero;
+                }
+
+                if (numero > maior) {
+                    maior = numero;
+                }
+            }
+
+        } while (numero != -1);
+
+        System.out.println("Soma: " + soma);
+        System.out.println("Média: " + (soma / quantidade));
+        System.out.println("Maior: " + maior);
+    }
+}
