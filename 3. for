@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Exercicio3 {
+    public static void main(String[] args) {
+
+        Scanner Caio = new Scanner(System.in);
+
+        int quantidade;
+        double salario;
+        double soma = 0;
+        double maior = 0;
+        double menor = 0;
+
+        System.out.println("Digite a quantidade de funcionários:");
+        quantidade = Caio.nextInt();
+
+        for (int i = 1; i <= quantidade; i++) {
+
+            System.out.println("Digite o salário:");
+            salario = Caio.nextDouble();
+
+            soma = soma + salario;
+
+            if (i == 1) {
+                maior = salario;
+                menor = salario;
+            }
+
+            if (salario > maior) {
+                maior = salario;
+            }
+
+            if (salario < menor) {
+                menor = salario;
+            }
+        }
+
+        System.out.println("Média: " + (soma / quantidade));
+        System.out.println("Maior: " + maior);
+        System.out.println("Menor: " + menor);
+    }
+}
